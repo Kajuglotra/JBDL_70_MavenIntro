@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean class="org.gfg.springCore.Student" id="student" init-method="initMethod" destroy-method="destroyMethod" scope="prototype">
+        <property name="name" value="John1"></property>
+        <property name="address" ref="addressRef"></property>
+    </bean>
+    <bean class="org.gfg.springCore.Address" id="addressRef">
+        <property name="city" value="hisar1"></property>
+        <property name="pincode" value="125001"></property>
+    </bean>
+
+</beans>
